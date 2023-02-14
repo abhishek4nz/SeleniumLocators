@@ -11,7 +11,7 @@ public class LocatorsXpath {
 
         System.setProperty("webdriver.chrome.driver","//home//innofied//Documents//Selenium//Drivers//chromedriver");
 
-        WebDriver driver = new ChromeDriver();  //LAUNCH DESIRED BROWSER
+       WebDriver driver = new ChromeDriver();  //LAUNCH DESIRED BROWSER
 
         driver.manage().window().maximize();    //MAXIMIZE BROWSER WINDOW
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);    //WAIT FOR ELEMENT TO LOAD

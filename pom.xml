@@ -15,7 +15,21 @@
     </properties>
 
     <build>
+      <finalName>JUnit Test Case</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M9</version>
+                <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <reuseForks>false</reuseForks>
+                    <forkCount>1</forkCount>
+             <!--   <groups>group</groups>
+                    <excludedGroups>group</excludedGroups>      -->
+                </configuration>
+            </plugin>
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -27,15 +41,7 @@
                 </configuration>
             </plugin>
 
-          <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                 <reuseForks>false</reuseForks>
-                     <forkCount>1</forkCount>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
 
@@ -62,7 +68,6 @@
                <version>RELEASE</version>
                <scope>test</scope>
            </dependency>
-
 
            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>

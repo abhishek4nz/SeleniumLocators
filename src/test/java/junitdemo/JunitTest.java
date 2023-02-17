@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
     @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
     @DisplayName("JUNIT TEST SUITE")
 
-    public class JunitTest2 extends BaseClass {
+    public class JunitTest extends BaseClass {
 
     @BeforeAll
      void setup() {

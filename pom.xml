@@ -21,13 +21,19 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M9</version>
-                <configuration>
-                    <testFailureIgnore>false</testFailureIgnore>
-                    <reuseForks>false</reuseForks>
-                    <forkCount>1</forkCount>
-             <!--   <groups>group</groups>
-                    <excludedGroups>group</excludedGroups>      -->
-                </configuration>
+                <!--             <configuration>
+                              <reuseForks>false</reuseForks>
+                                   <forkCount>1</forkCount>
+                               <groups>group</groups>
+                                   <excludedGroups>group</excludedGroups>
+                                 <excludes>
+                                   <exclude>JunitTest</exclude>
+                               </excludes>
+                               <includes>
+                                   <include>Junittest1</include>
+                               </includes>
+                           </configuration>    -->
+
             </plugin>
 
             <plugin>
@@ -45,12 +51,12 @@
         </plugins>
     </build>
 
-       <dependencies>
+     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.8.0</version>
+            <version>RELEASE</version>
         </dependency>
 
        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->

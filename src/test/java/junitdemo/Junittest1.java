@@ -19,6 +19,8 @@ public class Junittest1  {
 
     @Test
     public void secondtest()    {
+
         driver.get("https://saucedemo.com");
+        driver.close();
     }
 }

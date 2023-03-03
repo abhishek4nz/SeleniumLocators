@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class OldPom {
 
-    WebDriver driver;           //INITIALIZE WEBDRIVER
+     WebDriver driver;           //INITIALIZE WEBDRIVER
 
     //CREATING A CONSTRUCTOR FOR CREATING THE WEBDRIVER INSTANCE
     public OldPom(WebDriver driver)    {

@@ -1,12 +1,10 @@
 package pageObjectModel;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginTest {
-    static WebDriver driver;
-    public static void main(String[] args) {
+public class LoginTest extends BaseClass {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -16,11 +14,24 @@ public class LoginTest {
 
         OldPom loginpg = new OldPom(driver);
 
-        loginpg.setUsername("standard_user");
+        loginpg.setUsername(username);
 
-        loginpg.setPassword("secret_sauce");
+        loginpg.setPassword(password);
 
         loginpg.submitButton();
+
+        Thread.sleep(3000);
+
+//        driver.close();
+        driver.navigate().back();
+
+        //USING NEW POM OBJECT
+
+        NewPom np = new NewPom(driver);
+
+        np.setUsername("standard_user");
+        np.setPassword("secret_sauce");
+        np.submitButton();
 
         driver.close();
 
